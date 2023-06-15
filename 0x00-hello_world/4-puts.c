@@ -1,7 +1,8 @@
 #include<stdio.h>
 
 /**
- * Description: puts implementation
+ * main - puts implementation
+ * Return: 0 if no errors
  */
 int main(void)
 {
