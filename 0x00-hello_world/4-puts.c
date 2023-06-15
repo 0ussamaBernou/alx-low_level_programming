@@ -1,7 +1,8 @@
 #include<stdio.h>
 
 /**
- * main function
+ *
+ * Description: puts implementation
  */
 int main(void)
 {
