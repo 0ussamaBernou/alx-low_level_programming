@@ -1,6 +1,8 @@
 #include<stdio.h>
 
-/* main function */
+/**
+ * main function
+ */
 int main(void)
 {
 	char *str = "\"Programming is like building a multilingual puzzle";
