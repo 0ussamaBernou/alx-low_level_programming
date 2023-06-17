@@ -5,32 +5,31 @@
  *
  * Return: 0 expected
  */
-int main(void)
+int main( void )
 {
         int limit = 10;
 
-        for (int i = 0; i < limit; i++)
+        for ( int i = 0; i < limit; i++ )
         {
-                for (int j = 1; j < limit; j++)
+                for ( int j = 1; j < limit; j++ )
                 {
-                        if (j > i)
+                        if ( j > i )
                         {
-                                putchar(48 + i);
-                                putchar(48 + j);
+                                putchar( 48 + i );
+                                putchar( 48 + j );
 
-                                if (j == limit - 1 && i == limit - 2)
-                                        putchar('\n');
+                                if ( j == limit - 1 && i == limit - 2 )
+                                        putchar( '\n' );
                                 else
                                 {
-                                        putchar(',');
-                                        putchar(' ');
+                                        putchar( ',' );
+                                        putchar( ' ' );
                                 }
                         }
                         else
                                 continue;
                 }
-                
         }
-        
-        return (0);
+
+        return ( 0 );
 }

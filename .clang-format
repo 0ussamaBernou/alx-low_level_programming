@@ -1,7 +1,9 @@
 ---
-Language: C
+Language: Cpp
 ColumnLimit: 80
 SpacesInParentheses: true
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: false
 IndentWidth: 8  
 TabWidth: 8
 UseTab: Never
