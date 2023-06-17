@@ -7,11 +7,12 @@
  */
 int main( void )
 {
-        int limit = 10;
+        int i, j, limit;
+        limit = 10;
 
-        for ( int i = 0; i < limit; i++ )
+        for ( i = 0; i < limit; i++ )
         {
-                for ( int j = 1; j < limit; j++ )
+                for ( j = 1; j < limit; j++ )
                 {
                         if ( j > i )
                         {
