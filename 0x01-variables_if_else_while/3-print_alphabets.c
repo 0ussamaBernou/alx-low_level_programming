@@ -16,7 +16,7 @@ int main(void)
 	}
 
 	/* from z to A (ascii) */
-	ch -= (32+26);
+	ch -= (32 + 26);
 
 	while (ch <= 'Z')
 	{
