@@ -1,5 +1,15 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-  }
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "customizations": {
+        "extensions": ["ms-vscode.cpptools", "ms-python.python", "MS-vsliveshare.vsliveshare-pack"],
+		"settings": {
+		
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+		"ghcr.io/jungaretti/features/make:1": {}
+	}
+
 }
