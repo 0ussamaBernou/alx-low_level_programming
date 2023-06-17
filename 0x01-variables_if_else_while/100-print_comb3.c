@@ -8,6 +8,7 @@
 int main(void)
 {
 	int i, j, limit;
+
 	limit = 10;
 
 	for (i = 0; i < limit; i++)
