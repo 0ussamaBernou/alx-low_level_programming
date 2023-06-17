@@ -1,10 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
  * main - main func
  *
  * Return: 0
-*/
+ */
 
 int main(void)
 {
