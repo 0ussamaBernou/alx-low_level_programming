@@ -15,30 +15,26 @@ int main(void)
 	{
 		for (j = 1; j < limit; j++)
 		{
-			if (j > i)
+			for (k = 0; k < limit; k++)
 			{
-				for (k = 0; k < limit; k++)
+				if (k > j && j > i)
 				{
-					if (k > j)
-					{
-						putchar(48 + i);
-						putchar(48 + j);
-						putchar(48 + k);
+					putchar(48 + i);
+					putchar(48 + j);
+					putchar(48 + k);
 
-						if (j == limit - 2 &&
-						    i == limit - 3 &&
-						    k == limit - 1)
-							putchar('\n');
-						else
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					if (j == limit - 2 && i == limit - 3 &&
+					    k == limit - 1)
+						putchar('\n');
+					else
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
+				else
+					continue;
 			}
-			else
-				continue;
 		}
 	}
 
