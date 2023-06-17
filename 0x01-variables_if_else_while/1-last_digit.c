@@ -9,15 +9,14 @@
  */
 int main(void)
 {
-	int n;
+	int n, last;
+	char *sentence;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int last; 
 	last = n % 10;
 
-	char *sentence;
 	if (last > 5)
 		sentence = "and is greater than 5";
 	else if (last == 0)
