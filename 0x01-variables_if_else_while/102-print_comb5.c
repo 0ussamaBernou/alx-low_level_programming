@@ -19,7 +19,7 @@ int main(void)
 			{
 				putchar(48 + (int)(i / 10));
 				putchar(48 + (int)(i % 10));
-                putchar(' ');
+				putchar(' ');
 				putchar(48 + (int)(j / 10));
 				putchar(48 + (int)(j % 10));
 
