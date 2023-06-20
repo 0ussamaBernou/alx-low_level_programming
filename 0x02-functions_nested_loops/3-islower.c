@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * islower - checks if char lowercase
+ * _islower - checks if char lowercase
  *
  * Return: OnSucces 1. OnFail 0
  */
 
-int islower(char c)
+int _islower(char c)
 {
 	int a, z;
 
