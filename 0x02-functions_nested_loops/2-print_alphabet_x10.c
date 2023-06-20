@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_alphabet - prints alphabet lowercase and newline
+ * print_alphabet_x10 - prints alphabet lowercase and newline 10 times
  *
  * Return: void
  */
