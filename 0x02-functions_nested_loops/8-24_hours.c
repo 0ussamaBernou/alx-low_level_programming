@@ -14,7 +14,7 @@ int jack_bauer(void)
 
 	for (i = 0; i < hours; i++)
 	{
-		for (j = 1; j < mins; j++)
+		for (j = 0; j < mins; j++)
 		{
 			_putchar('0' + (int)(i / 10));
 			_putchar('0' + (int)(i % 10));
