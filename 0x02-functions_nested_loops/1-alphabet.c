@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - prints _putchar and newline
+ * print_alphabet - prints alphabet lowercase and newline
  *
- * Return: 0
+ * Return: void
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	int i, a, z;
 
@@ -20,6 +20,4 @@ int main(void)
 	}
 
 	_putchar('\n');
-
-	return (0);
 }
