@@ -7,7 +7,7 @@
  */
 void times_table(void)
 {
-	int i, j, limit;
+	int i, j, limit, product;
 
 	limit = 10;
 
@@ -15,13 +15,15 @@ void times_table(void)
 	{
 		for (j = 0; j < limit; j++)
 		{
-			if (i > 10)
+			product = i * j;
+
+			if (product >= 10)
 			{
-				_putchar('0' + (int)((i * j) / 10));
-				_putchar('0' + (int)((i * j) % 10));
+				_putchar('0' + (int)((product) / 10));
+				_putchar('0' + (int)((product) % 10));
 			}
 			else
-				_putchar('0' + (int)(i * j));
+				_putchar('0' + (int)(product));
 
 			if (i != limit - 1)
 			{
@@ -29,7 +31,6 @@ void times_table(void)
 				_putchar(' ');
 			}
 		}
-		_putchar('$');
 		_putchar('\n');
 	}
 }
