@@ -23,11 +23,14 @@ void times_table(void)
 			else
 				_putchar('0' + (int)(i * j));
 
-			_putchar(',');
-			_putchar(' ');
+			if (i != limit - 1)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-		_putchar('\n');
 		_putchar('$');
+		_putchar('\n');
 	}
 
 	return (0);
