@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * jack_bauer - jack_bauer function
+ * times_table - prints the product table
  *
  * Return: void
  */
-int jack_bauer(void)
+void times_table(void)
 {
 	int i, j, limit;
 
@@ -15,10 +15,19 @@ int jack_bauer(void)
 	{
 		for (j = 0; j < limit; j++)
 		{
-			_putchar('0' + (int)(i * j));
+			if (i > 10)
+			{
+				_putchar('0' + (int)((i * j) / 10));
+				_putchar('0' + (int)((i * j) % 10));
+			}
+			else
+				_putchar('0' + (int)(i * j));
+
 			_putchar(',');
+			_putchar(' ');
 		}
 		_putchar('\n');
+		_putchar('$');
 	}
 
 	return (0);
