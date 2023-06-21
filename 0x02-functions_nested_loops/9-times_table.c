@@ -21,17 +21,17 @@ void times_table(void)
 
 			if (product >= 10)
 			{
+				_putchar(',');
 				_putchar(' ');
 				_putchar('0' + (int)((product) / 10));
 				_putchar('0' + (int)((product) % 10));
-				_putchar(',');
 			}
 			else
 			{
+				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + (int)(product));
-				_putchar(',');
 			}
 
 			if (j == limit - 1)
