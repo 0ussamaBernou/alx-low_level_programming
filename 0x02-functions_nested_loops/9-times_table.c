@@ -13,23 +13,25 @@ void times_table(void)
 
 	for (i = 0; i < limit; i++)
 	{
-		for (j = 0; j < limit; j++)
+		_putchar('0');
+
+		for (j = 1; j < limit; j++)
 		{
 			product = i * j;
 
 			if (product >= 10)
 			{
+				_putchar(' ');
 				_putchar('0' + (int)((product) / 10));
 				_putchar('0' + (int)((product) % 10));
 				_putchar(',');
-				_putchar(' ');
 			}
 			else
 			{
+				_putchar(' ');
+				_putchar(' ');
 				_putchar('0' + (int)(product));
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
 			}
 
 			if (j == limit - 1)
