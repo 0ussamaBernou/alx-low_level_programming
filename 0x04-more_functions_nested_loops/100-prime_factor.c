@@ -7,6 +7,32 @@
  * Return: 1 if prime, 0 otherwise
  * Note: 1 is not prime
  */
+int is_prime(long int n);
+
+/*
+ * largest_prime - find the largest prime factor of a number
+ * @n: number to factor
+ * Return: largest prime factor
+ */
+long int largest_prime(long int n);
+
+/*
+ * main - print the largest prime factor of 612852475143
+ * Return: 0
+ */
+int main(void)
+{
+	long int n, largest;
+
+	n = 612852475143;
+
+	largest = largest_prime(n);
+
+	printf("%ld\n", largest);
+
+	return 0;
+}
+
 int is_prime(long int n)
 {
 	int i, sqrt_n;
@@ -33,11 +59,6 @@ int is_prime(long int n)
 	return 1;
 }
 
-/*
- * largest_prime - find the largest prime factor of a number
- * @n: number to factor
- * Return: largest prime factor
- */
 long int largest_prime(long int n)
 {
 	long int largest = 1;
@@ -64,19 +85,4 @@ long int largest_prime(long int n)
 	}
 
 	return largest;
-}
-
-/*
- * main - print the largest prime factor of 612852475143
- * Return: 0
- */
-int main(void)
-{
-	long int n, largest;
-
-	n = 612852475143;
-	largest = largest_prime(n);
-
-	printf("%ld\n", largest);
-	return 0;
 }
