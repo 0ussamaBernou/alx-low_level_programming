@@ -74,7 +74,7 @@ int main(void)
 {
 	int n, largest;
 
-	n = 1231952;
+	n = 612852475143;
 	largest = largest_prime(n);
 
 	printf("%d\n", largest);
