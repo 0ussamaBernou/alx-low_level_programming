@@ -7,7 +7,6 @@
  * Return: 1 if prime, 0 otherwise
  * Note: 1 is not prime
  */
-
 int is_prime(int n)
 {
 	int i, sqrt_n;
@@ -39,7 +38,6 @@ int is_prime(int n)
  * @n: number to factor
  * Return: largest prime factor
  */
-
 int largest_prime(int n)
 {
 	int largest = 1;
@@ -74,8 +72,11 @@ int largest_prime(int n)
  */
 int main(void)
 {
-	int n = 1231952;
-	int largest = largest_prime(n);
+	int n, largest;
+
+	n = 1231952;
+	largest = largest_prime(n);
+
 	printf("%d\n", largest);
 	return 0;
 }
