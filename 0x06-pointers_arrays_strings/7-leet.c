@@ -12,13 +12,13 @@ char *leet(char *str)
 	char *letters = "aAeEoOtTlL";
 	char *numbers = "4433007711";
 
-	for (; *new_str; new_str++)
+	for (; *str; str++)
 	{
 		for (i = 0; letters[i]; i++)
 		{
-			if (*new_str == letters[i])
+			if (*str == letters[i])
 			{
-				*new_str = numbers[i];
+				*str = numbers[i];
 				break;
 			}
 		}
