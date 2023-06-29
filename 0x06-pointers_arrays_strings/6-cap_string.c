@@ -10,15 +10,17 @@ char *cap_string(char *str)
 	char *new_str = str;
 
 	for (i = 0; new_str[i] != '\0'; i++)
-		if (new_str[i] == ',' || new_str[i] == ';' ||
-		    new_str[i] == '.' || new_str[i] == '!' ||
-		    new_str[i] == '?' || new_str[i] == '"' ||
-		    new_str[i] == '(' || new_str[i] == ')' ||
-		    new_str[i] == '{' || new_str[i] == '}' ||
-		    new_str[i] == ' ' || new_str[i] == '\t' ||
-		    new_str[i] == '\n')
-			if (new_str[i + 1] >= 'a' && new_str[i + 1] <= 'z')
+		if (new_str[i] >= 'a' && new_str[i] <= 'z')
+		{
+			if (new_str[i - 1] == ',' || new_str[i - 1] == ';' ||
+			    new_str[i - 1] == '.' || new_str[i - 1] == '!' ||
+			    new_str[i - 1] == '?' || new_str[i - 1] == '"' ||
+			    new_str[i - 1] == '(' || new_str[i - 1] == ')' ||
+			    new_str[i - 1] == '{' || new_str[i - 1] == '}' ||
+			    new_str[i - 1] == ' ' || new_str[i - 1] == '\t' ||
+			    new_str[i - 1] == '\n' || i == 0)
 				new_str[i] -= ('a' - 'A');
+		}
 
 	return (new_str);
 }
