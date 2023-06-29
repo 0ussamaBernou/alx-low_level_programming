@@ -9,13 +9,13 @@
  *
  * Return: pointer to the resulting string dest
  */
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	size_t length, i;
 
 	length = strlen(dest);
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	for (i = 0; (int)i < n && src[i] != '\0'; i++)
 		dest[length + i] = src[i];
 
 	dest[length + i] = '\0';
