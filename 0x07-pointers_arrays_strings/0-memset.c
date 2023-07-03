@@ -22,5 +22,5 @@ char *_memset(char *s, char b, unsigned int n)
 		p++;
 	}
 
-	return s;
+	return (s);
 }
