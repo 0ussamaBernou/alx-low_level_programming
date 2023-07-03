@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 	char *occ;
 	occ = s;
 
-	while (*occ != c && *occ != '\0')
+	while (*occ != c || *occ != '\0')
 	{
 		occ++;
 	}
