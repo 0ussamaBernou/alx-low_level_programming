@@ -10,6 +10,7 @@ char *_strchr(char *s, char c)
 {
 
 	char *occ;
+
 	occ = s;
 
 	while (*occ != c && *occ != '\0')
