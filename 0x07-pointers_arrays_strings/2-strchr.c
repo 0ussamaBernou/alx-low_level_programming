@@ -13,8 +13,7 @@ char *_strchr(char *s, char c)
 
 	p = s;
 
-	do
-	{
+	do {
 		if (*p == c)
 		{
 			return (p);
