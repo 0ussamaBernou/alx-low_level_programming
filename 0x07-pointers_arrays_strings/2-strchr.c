@@ -18,8 +18,5 @@ char *_strchr(char *s, char c)
 		occ++;
 	}
 
-	if (*occ == '\0')
-		return (NULL);
-
-	return (occ);
+	return (*occ == '\0' ? NULL : occ);
 }
