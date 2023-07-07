@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - prints its name, followed by a new line.
+ * main - prints the result of the multiplication, followed by a new line.
  * @argc: number of arguments
  * @argv: array of pointers to the strings (arguments)
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	argc = argc;
-	printf("%s\n", argv[0]);
+        printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+
 	return (0);
 }
