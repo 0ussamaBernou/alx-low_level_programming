@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * main - main func
  * Return:  0 if true
