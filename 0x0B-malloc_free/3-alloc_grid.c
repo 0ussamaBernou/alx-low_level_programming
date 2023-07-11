@@ -10,17 +10,14 @@
 int **alloc_grid(int width, int height)
 {
 	int w, h;
-	int *ptr;
 	int **pptr;
 
-	ptr = (int *)malloc(width * height * sizeof(int));
+	pptr = (int **)malloc(width * height * sizeof(int));
 
-	if (*ptr == NULL)
+	if (pptr == NULL)
 	{
 		return (NULL);
 	}
-
-	pptr = &ptr;
 
 	h = 0;
 	while (h < height)
