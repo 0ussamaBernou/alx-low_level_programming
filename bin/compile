@@ -1,2 +1,2 @@
-#!/usr/bin/bash
+#!/bin/bash
 gcc -c -Wall -Werror -Wextra -pedantic -std=gnu89 "$1.c" -o $1
