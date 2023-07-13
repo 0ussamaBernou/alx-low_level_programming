@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * string_nconcat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * @n: number of bytes of s2 to concatenate to s1
+ * Return: pointer to concatenated string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s3;
@@ -13,10 +20,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s1[i] != '\0')
-		i++;
+	for (i = 0; s1[i] != '\0'; i++)
+		;
 
-	s3 = malloc_checked(sizeof *s1 * (i + n) + 1);
+	s3 = malloc(sizeof *s1 * (i + n + 1));
+	if (s3 == NULL)
+		return (NULL);
 
 	for (k = 0; k < i; k++)
 		s3[k] = s1[k];
