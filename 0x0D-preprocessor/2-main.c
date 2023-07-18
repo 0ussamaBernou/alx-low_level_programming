@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	print("%s", __BASE_FILE__);
+	printf("%s", __BASE_FILE__);
 	return (0);
 }
