@@ -2,8 +2,8 @@
 
 /**
  * print_name - print name
- * @name - the name
- * @f - pointer to function
+ * @name: the name
+ * @f: pointer to function
  *
  * Return: void
  */
