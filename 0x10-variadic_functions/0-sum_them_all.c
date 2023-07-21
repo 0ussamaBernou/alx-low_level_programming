@@ -2,10 +2,11 @@
 
 /** sum_them_all - sum all parameters
  *
- * @n: first num
+ * @n: number of params
  *
- * Return: the sum
+ * Return: int the sum
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list al;
