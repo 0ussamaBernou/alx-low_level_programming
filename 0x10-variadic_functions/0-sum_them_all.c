@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
 
-/** sum all parameters
+/** sum_them_all - sum all parameters
  *
  * @n: first num
  * @...: numbers to sum
@@ -22,3 +21,4 @@ int sum_them_all(const unsigned int n, ...)
 	va_end(al);
 	return (sum);
 }
+
