@@ -3,7 +3,6 @@
 /** sum_them_all - sum all parameters
  *
  * @n: first num
- * @...: numbers to sum
  *
  * Return: the sum
  */
