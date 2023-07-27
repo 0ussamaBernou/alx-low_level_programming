@@ -12,6 +12,10 @@ size_t list_len(const list_t *h)
 	size_t length;
 	list_t *ptr;
 
+	if (ptr == NULL) {
+		return (0);
+	}
+
 	ptr = (list_t *)h;
 	length = 1;
 
