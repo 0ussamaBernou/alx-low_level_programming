@@ -15,11 +15,19 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new;
 
 	new = malloc(sizeof(list_t));
+	if (!new)
+	{
+		return (NULL);
+	}
+
 	new->str = strdup(str);
 	new->len = strlen(str);
 
-	new->next = *head;
-	head = &new;
+	/* new next node is whats head was pointing to */
+	new->next = (*head);
+
+	/* head now points to the new node pointer */
+	(*head) = new;
 
 	return (new);
 }
