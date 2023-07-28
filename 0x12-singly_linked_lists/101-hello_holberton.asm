@@ -1,6 +1,6 @@
 ; Define variables in the data section
 SECTION .DATA
-	hello:     db 'Hello, Holberton',16
+	hello:     db 'Hello, Holberton',10
 	helloLen:  equ $-hello
 
 ; Code goes in the text section
