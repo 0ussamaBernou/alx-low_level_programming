@@ -22,7 +22,7 @@ size_t print_listint(const listint_t *h)
 
 	while (ptr)
 	{
-        nodes++;
+		nodes++;
 		printf("%i\n", ptr->n);
 		ptr = ptr->next;
 	}
