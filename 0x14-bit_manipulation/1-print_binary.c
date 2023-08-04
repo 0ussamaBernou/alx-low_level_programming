@@ -16,6 +16,12 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
+
+	if (n == 1)
+	{
+		_putchar('1');
+		return;
+	}
 	for (i = 63; (int)i >= 0; i--)
 	{
 
