@@ -24,7 +24,7 @@ void print_binary(unsigned long int n)
 		_putchar('1');
 		return;
 	}
-	for (i = 63; (int)i >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
 
 		mask = (1 << i);
