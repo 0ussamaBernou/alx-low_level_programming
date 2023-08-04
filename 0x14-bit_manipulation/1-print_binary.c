@@ -9,8 +9,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int  mask;
-	int counter,i;
+	unsigned long int mask;
+	int counter, i;
 
 	counter = 0;
 	if (n == 0)
