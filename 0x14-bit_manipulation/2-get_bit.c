@@ -2,10 +2,10 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int value;
+	unsigned long int value;
 
 	value = (n >> index) & 1UL;
 
-	return (value);
+	return ((int)value);
 }
 
