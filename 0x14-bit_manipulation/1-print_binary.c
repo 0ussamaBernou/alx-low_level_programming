@@ -9,8 +9,10 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int i, mask, counter;
+	unsigned long int i, mask;
+	int counter;
 
+	counter = 0;
 	if (n == 0)
 	{
 		_putchar('0');
@@ -22,7 +24,7 @@ void print_binary(unsigned long int n)
 		_putchar('1');
 		return;
 	}
-	for (i = 63; (int)i >= 0; i--)
+	for (i = 31; (int)i >= 0; i--)
 	{
 
 		mask = (1 << i);
