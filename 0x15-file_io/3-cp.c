@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 			return (98);
 		}
 
-		nb_wr = write(ftd, buffer, BUF_SIZE);
+		nb_wr = write(ftd, buffer, nb_rd);
 		if (nb_wr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s",
