@@ -1,8 +1,6 @@
 #include "main.h"
 #include <errno.h>
-#include <fcntl.h>
 #include <string.h>
-#include <unistd.h>
 
 /**
  * append_text_to_file - append text to file
@@ -31,6 +29,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		}
 		return -1;
 	}
+
 	if (text_content)
 	{
 		written = write(fd, text_content, strlen(text_content));
@@ -44,3 +43,4 @@ int append_text_to_file(const char *filename, char *text_content)
 	close(fd);
 	return (1);
 }
+
