@@ -1,5 +1,5 @@
-#ifndef LISTS_H
-#define LISTS_H
+#ifndef LIST_H
+#define LIST_H
 
 #include <stddef.h>
 /**
@@ -20,4 +20,4 @@ typedef struct dlistint_s
 
 size_t print_dlistint(const dlistint_t *h);
 
-#endif
+#endif /* LIST_H */
