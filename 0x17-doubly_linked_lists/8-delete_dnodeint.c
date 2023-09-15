@@ -36,6 +36,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			iterator->next->prev = NULL;
 			*head = iterator->next;
 		}
+		else
+		{
+			return (-1);
+		}
 	}
 	free(iterator);
 	return (1);
