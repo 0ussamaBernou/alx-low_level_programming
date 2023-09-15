@@ -1,6 +1,14 @@
 #include "lists.h"
 #include <stdlib.h>
 
+/**
+ * delete_dnodeint_at_index - delete node at index
+ *
+ * @head: head of list
+ * @index: index of node
+ *
+ * Return: 1 on success -1 if failed
+ */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *iterator;
