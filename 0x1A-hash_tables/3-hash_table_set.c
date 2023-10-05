@@ -29,6 +29,8 @@ hash_node_t *add_hash_node(hash_node_t **head, const char *value,
 			   const char *key)
 {
 	hash_node_t *new;
+	char *new_key;
+	char *new_value;
 
 	if (!head)
 		return (NULL);
@@ -40,8 +42,19 @@ hash_node_t *add_hash_node(hash_node_t **head, const char *value,
 		return (NULL);
 	}
 
-	new->key = strdup(key);
-	new->value = strdup(value);
+	new_key = strdup(key);
+	if (!new_key)
+	{
+		return (NULL);
+	}
+	new->key = new_key;
+
+	new_value = strdup(value);
+	if (!new_value)
+	{
+		return (NULL);
+	}
+	new->value = new_value;
 
 	/* if list is not empty */
 	if (*head)
