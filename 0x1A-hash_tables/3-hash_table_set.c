@@ -26,13 +26,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(key, node->key) == 0)
 		{
+			/* FREE THE OLD VALUE */
 			free(node->value);
+
 			new_val = strdup(value);
 			if (!new_val)
-			{
-				free(new_val);
 				return (0);
-			}
 			node->value = new_val;
 			return (1);
 		}
