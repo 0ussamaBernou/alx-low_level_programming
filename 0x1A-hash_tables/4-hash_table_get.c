@@ -1,5 +1,14 @@
 #include "hash_tables.h"
 #include <string.h>
+
+/**
+ * hash_table_get - get value of a key in the hash table
+ *
+ * @ht: hash table
+ * @key: the key
+ *
+ * Return: the value of the key
+ */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
