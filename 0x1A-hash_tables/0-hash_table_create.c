@@ -1,6 +1,13 @@
 #include "hash_tables.h"
 #include <stdlib.h>
 
+/**
+ * hash_table_create - creates a hash table
+ *
+ * @size: size of the hash table
+ *
+ * Return: reference to the hash table
+ */
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
