@@ -21,10 +21,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * add_hash_node - add node at the beginning of listint
+ * add_hash_node - add node at the beginning of list
  *
  * @head: head of listint
- * @n: content of listint
+ * @value: value
+ * @key: key
  *
  * Return: pointer to the created node
  */
