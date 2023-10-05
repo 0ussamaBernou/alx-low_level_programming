@@ -1,6 +1,14 @@
 #include "hash_tables.h"
 #include <string.h>
 
+/**
+ * hash_table_set - set value of a key in hash table
+ * @ht: hash table
+ * @key: key
+ * @value: value
+ *
+ * Return: 1 for success 0 if failed
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
