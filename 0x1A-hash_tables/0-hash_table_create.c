@@ -3,7 +3,7 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	/* unsigned long int i; */
+	unsigned long int i;
 	hash_table_t *thead;
 
 	thead = (hash_table_t *)malloc(sizeof(hash_table_t));
@@ -15,8 +15,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	thead->size = size;
 
-	thead->array = NULL;
-	/* thead->array = (hash_node_t **)calloc(size, sizeof(hash_node_t *));
+	thead->array = (hash_node_t **)calloc(size, sizeof(hash_node_t *));
 	if (!(thead->array))
 	{
 		free(thead->array);
@@ -25,7 +24,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	for (i = 0; i < size; i++)
 		thead->array[i] = NULL;
-	*/
 
 	return (thead);
 }
