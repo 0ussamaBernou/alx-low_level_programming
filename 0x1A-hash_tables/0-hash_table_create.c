@@ -12,13 +12,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(thead);
 		return (NULL);
 	}
+
 	thead->size = size;
+
 	thead->array = (hash_node_t **)calloc(size, sizeof(hash_node_t *));
 	if (!(thead->array))
 	{
 		free(thead->array);
 		return (NULL);
 	}
+
 	for (i = 0; i < size; i++)
 		thead->array[i] = NULL;
 
