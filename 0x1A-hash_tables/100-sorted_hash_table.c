@@ -74,7 +74,6 @@ void insert_shash_node(shash_node_t **shead, shash_node_t **stail,
 		       shash_node_t **node)
 {
 	shash_node_t *tmp;
-	shash_node_t *pretmp;
 
 	/* Check for NULL nodes. */
 	if (*node == NULL)
@@ -84,36 +83,41 @@ void insert_shash_node(shash_node_t **shead, shash_node_t **stail,
 	(*node)->sprev = NULL;
 
 	/* IF HEAD IS NULL */
-	tmp = *shead;
-	if (!tmp)
+	if (!*shead)
 	{
 		*shead = *node;
 		*stail = *node;
 		return;
 	}
 
-	while (tmp && (*node)->key[0] >= tmp->key[0])
+	tmp = *shead;
+	while (tmp)
 	{
-		pretmp = tmp;
+		if ((*node)->key[0] < tmp->key[0])
+		{
+			if (tmp->sprev)
+			{
+				tmp->sprev->snext = *node;
+				(*node)->sprev = tmp->sprev;
+			}
+			else
+			{
+				*shead = *node;
+			}
+			(*node)->snext = tmp;
+			tmp->sprev = *node;
+			return;
+		}
+
+		if (!tmp->snext)
+		{
+			tmp->snext = *node;
+			(*node)->sprev = tmp;
+			*stail = *node;
+			return;
+		}
+
 		tmp = tmp->snext;
-	}
-
-	/* IF PRETMP IS THE TAIL */
-	if (!tmp)
-	{
-		(*node)->sprev = pretmp;
-		pretmp->snext = *node;
-		return;
-	}
-
-	(*node)->snext = tmp;
-	(*node)->sprev = tmp->sprev;
-
-	/* IF TMP IS NOT THE HEAD */
-	if (tmp->sprev)
-	{
-		tmp->sprev->snext = (*node);
-		tmp->sprev = (*node);
 	}
 }
 
