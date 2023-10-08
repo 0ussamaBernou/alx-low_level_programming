@@ -1,6 +1,12 @@
 #include "hash_tables.h"
 #include <string.h>
 
+/**
+ * shash_table_create - Creates a new sorted hash table.
+ * @size: The size of the hash table.
+ *
+ * Return: A pointer to the newly created hash table, or NULL if it fails.
+ */
 shash_table_t *shash_table_create(unsigned long int size)
 {
 
@@ -31,6 +37,14 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (thead);
 }
 
+/**
+ * shash_table_set - Adds or updates a key-value pair in a sorted hash table.
+ * @ht: The sorted hash table.
+ * @key: The key to add or update.
+ * @value: The value associated with the key.
+ *
+ * Return: 1 on success, 0 on failure.
+ */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -70,6 +84,15 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
+/**
+ * insert_shash_node - Inserts a node into a sorted doubly linked list.
+ * @shead: The head of the sorted doubly linked list.
+ * @stail: The tail of the sorted doubly linked list.
+ * @node: The node to be inserted.
+ *
+ * This function is used internally to maintain the sorted order of elements
+ * in the sorted hash table.
+ */
 void insert_shash_node(shash_node_t **shead, shash_node_t **stail,
 		       shash_node_t **node)
 {
@@ -121,6 +144,14 @@ void insert_shash_node(shash_node_t **shead, shash_node_t **stail,
 	}
 }
 
+/**
+ * add_shash_node - Adds a new node to the beginning of a linked list.
+ * @head: The head of the linked list.
+ * @value: The value to be stored in the new node.
+ * @key: The key to be stored in the new node.
+ *
+ * Return: A pointer to the newly created node, or NULL if it fails.
+ */
 shash_node_t *add_shash_node(shash_node_t **head, const char *value,
 			     const char *key)
 {
@@ -169,6 +200,16 @@ shash_node_t *add_shash_node(shash_node_t **head, const char *value,
 
 	return (new);
 }
+
+/**
+ * shash_table_get - Retrieves the value associated with a key in a sorted hash
+ * table.
+ * @ht: The sorted hash table.
+ * @key: The key to search for.
+ *
+ * Return: A dynamically allocated string containing the value associated with
+ * the key, or NULL if the key is not found or if the function fails.
+ */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 
@@ -197,6 +238,12 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (value);
 }
 
+/**
+ * shash_table_print - Prints the contents of a sorted hash table.
+ * @ht: The sorted hash table.
+ *
+ * This function prints the key-value pairs in the sorted order of keys.
+ */
 void shash_table_print(const shash_table_t *ht)
 {
 
@@ -228,6 +275,13 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 
+/**
+ * shash_table_print_rev - Prints the contents of a sorted hash table in reverse
+ * order.
+ * @ht: The sorted hash table.
+ *
+ * This function prints the key-value pairs in reverse order of keys.
+ */
 void shash_table_print_rev(const shash_table_t *ht)
 {
 
@@ -256,6 +310,12 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("}\n");
 }
 
+/**
+ * shash_table_delete - Deletes a sorted hash table and its elements.
+ * @ht: The sorted hash table to be deleted.
+ *
+ * This function frees the memory used by the hash table and its elements.
+ */
 void shash_table_delete(shash_table_t *ht)
 {
 
