@@ -100,7 +100,7 @@ void insert_shash_node(shash_node_t **shead, shash_node_t **stail,
 
 	/* Check for NULL nodes. */
 	if (*node == NULL)
-		return;
+		return ();
 
 	(*node)->snext = NULL;
 	(*node)->sprev = NULL;
