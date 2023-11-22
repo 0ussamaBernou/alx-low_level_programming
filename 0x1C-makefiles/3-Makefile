@@ -13,7 +13,8 @@ $(NAME): $(OBJ) # Rule to link the .o files into the executable
 	$(CC) -c $< -o $@
 
 oclean: # Rule to clean the .o files
-	rm -f $(wildcard *~) $(wildcard *.swp) $(wildcard *.swo)
+	rm -f $(wildcard *.swp) $(wildcard *.swo)
+
 clean:
 	rm -f $(OBJ) # Rule to clean the .o files
 
