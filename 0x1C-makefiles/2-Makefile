@@ -11,6 +11,3 @@ $(NAME): $(OBJ) # Rule to link the .o files into the executable
 
 %.o: %.c # Rule to compile the .c files into .o files
 	$(CC) -c $< -o $@
-
-clean: # Rule to clean the build
-	rm -f $(OBJ) $(NAME)
