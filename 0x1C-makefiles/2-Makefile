@@ -1,0 +1,8 @@
+CC= gcc 
+SRC= main.c school.c
+# OBJ= $(SRC:.c=.o)
+NAME= school
+all: 
+	# $(foreach ) $(CC) -c $(SRC) -o $(OBJ)
+	$(foreach src,  $(SRC) ,$(CC) -c $(src) -o $(src:.c=.o))
+	$(CC) $(wildcard *.o) -o $(NAME)
