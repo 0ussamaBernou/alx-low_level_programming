@@ -1,0 +1,28 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(NAME) # Rule to build the executable
+
+$(NAME): $(OBJ) # Rule to link the .o files into the executable
+
+	$(CC) $(CFLAGS) -o $@ $^
+
+%.o: %.c # Rule to compile the .c files into .o files
+	$(CC) $(CFLAGS) -c $< -o $@
+
+oclean: # Rule to clean the .o files
+	$(RM) $(wildcard *~)
+
+clean:
+	$(RM) $(OBJ) # Rule to clean the .o files
+
+fclean: oclean clean # Rule to clean the .o and executable files
+	$(RM) $(NAME) # Rule to clean the executable
+
+re:
+	touch $(SRC) # update the timestamp of the source files
+	$(MAKE) # call make within the makefile
