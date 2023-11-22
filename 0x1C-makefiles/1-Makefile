@@ -1,5 +1,4 @@
-
-CC= "gcc -Wall -Werror -Wextra -pedantic -std=gnu89"
+CC=gcc 
 CRC= "main.c school.c"
 all:
-	$(CC) $(CRC) -o school
+	$(CC) -Wall -Werror -Wextra -pedantic -std=gnu89 $(CRC) -o school
