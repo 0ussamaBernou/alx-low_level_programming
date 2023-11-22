@@ -16,7 +16,7 @@ oclean: # Rule to clean the .o files
 	$(RM) $(wildcard *~)
 
 clean:
-	$(RM) $(wildcard *.o) # Rule to clean the .o files
+	$(RM) $(OBJ) # Rule to clean the .o files
 
 fclean: oclean clean # Rule to clean the .o and executable files
 	$(RM) $(NAME) # Rule to clean the executable
