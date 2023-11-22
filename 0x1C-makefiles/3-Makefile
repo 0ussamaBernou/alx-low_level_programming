@@ -18,9 +18,7 @@ oclean: # Rule to clean the .o files
 clean:
 	rm -f $(OBJ) # Rule to clean the .o files
 
-fclean:
-	$(oclean)
-	$(clean)
+fclean: oclean clean # Rule to clean the .o and executable files
 	rm -f $(NAME) # Rule to clean the executable
 
 re:
