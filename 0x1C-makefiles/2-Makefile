@@ -1,10 +1,16 @@
-CC= gcc 
-SRC= main.c school.c
-OBJ= $(SRC:.c=.o)
-NAME= school
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
 
-all: $(OBJ)
-	# $(foreach ) $(CC) -c $(SRC) -o $(OBJ)
-	# $(foreach src,  $(SRC) ,$(CC) -c $(src) -o $(src:.c=.o))
-	# $(CC) $(wildcard *.o) -o $(NAME)
-	$(CC) $(OBJ) -o $(NAME)
+all: $(NAME) # Rule to build the executable
+
+$(NAME): $(OBJ) # Rule to link the .o files into the executable
+
+	$(CC) -o $@ $^
+
+%.o: %.c # Rule to compile the .c files into .o files
+	$(CC) -c $< -o $@
+
+clean: # Rule to clean the build
+	rm -f $(OBJ) $(NAME)
