@@ -2,7 +2,7 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-
+RM = rm -f
 all: $(NAME) # Rule to build the executable
 
 $(NAME): $(OBJ) # Rule to link the .o files into the executable
@@ -13,13 +13,13 @@ $(NAME): $(OBJ) # Rule to link the .o files into the executable
 	$(CC) -c $< -o $@
 
 oclean: # Rule to clean the .o files
-	rm -f $(wildcard *~)
+	$(RM) $(wildcard *~)
 
 clean:
-	rm -f $(OBJ) # Rule to clean the .o files
+	$(RM) $(OBJ) # Rule to clean the .o files
 
 fclean: oclean clean # Rule to clean the .o and executable files
-	rm -f $(NAME) # Rule to clean the executable
+	$(RM) $(NAME) # Rule to clean the executable
 
 re:
 	touch $(SRC) # update the timestamp of the source files
